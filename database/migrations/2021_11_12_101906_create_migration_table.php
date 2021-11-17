@@ -15,7 +15,7 @@ class CreateMigrationTable extends Migration
     {
         Schema::create('migration', function (Blueprint $table) {
             $table->id();
-            $table->string('migration');
+            $table->string('migration in');
             $table->timestamps();
         });
     }

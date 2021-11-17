@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\DeleteController;
+use App\Http\Controllers\DeleteeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +34,10 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 Route::get('produk', [ProdukController::class, 'index'])->name('getProduk');
 
 Route::get('/produk/delete/{id}', [ProdukController::class, 'destroy'])->name('produkDelete');
+
+//customer
+Route::get('customer', [DeleteController::class, 'index'])->name('getCustomers');
+Route::get('/customer/delete/{id}', [DeleteController::class, 'destroy'])->name('customerDelete');
+
+Route::get('categories', [DeleteeController::class, 'index'])->name('getCategories');
+Route::get('/categories/delete/{id}', [DeleteeController::class, 'destroy'])->name('categoriesDelete');
